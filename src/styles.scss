@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/modules/variables.scss';
+
+*,
+body {
+  margin: 0;
+  p,
+  h1,
+  h2,
+  span,
+  div {
+    font-family: $primary_font;
+    font-size: $primary-fs;
+  }
+}
+
+@media (max-width: 768px) {
+  .padding-left {
+    // padding-left: 20px;
+  }
+}
+.primary-button {
+  padding: 10px 20px;
+  border: 2px solid $white;
+  font-size: $font-md;
+  background-color: transparent;
+  color: $white;
+  cursor: pointer;
+  &:focus,
+  :active {
+    outline: none;
+    border-style: outset;
+  }
+}
+
+.container {
+  padding: 0 10%;
+}

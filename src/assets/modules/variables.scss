@@ -1,0 +1,35 @@
+//----------------------------------*\
+// Fonts
+//----------------------------------*/
+@import './fonts.scss';
+
+// primary font
+$primary_font: 'Lato';
+
+// font-weight
+$thin: 100;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+// Font size
+$font-xs: 12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 23px;
+$font-extra-lg: 35px;
+$font-max: 55px;
+
+//colors
+$green: #2fbbb4;
+$green-opacity: rgba(47, 187, 180, 0.8);
+$yellow: #ffb533;
+$yellow-opacity: rgba(255, 180, 51, 0.8);
+$white: #fff;
+$red: rgb(230, 27, 0);
+$gray: rgba(128, 128, 128, 0.525);
+$light-gray: rgba(240, 240, 240, 0.658);
+$black: #333;
+$gray-background: #ececec;

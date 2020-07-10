@@ -1,0 +1,98 @@
+@import '../../../assets/modules/variables.scss';
+.card_box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.24);
+  &__info {
+    padding: 0px 40px;
+    height: 85%;
+    p,
+    h2 {
+      color: $white;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p:nth-child(1) {
+      font-weight: $light;
+      padding-top: 30px;
+    }
+    p:nth-child(3) {
+      font-size: $font-md;
+      font-weight: $light;
+      margin-bottom: 20px;
+    }
+    .highlight {
+      font-size: $font-lg;
+      font-weight: $bold;
+    }
+    h2 {
+      font-size: $font-max;
+    }
+
+    &__hyperlink {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      a {
+        color: $white;
+        margin-left: 5px;
+      }
+      img {
+        height: 20px;
+      }
+    }
+  }
+  &__vote {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    svg {
+      font-size: 30px;
+      color: $white;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__positive {
+      cursor: pointer;
+      width: 50%;
+      height: 100%;
+      background-color: $green-opacity;
+    }
+
+    &__negative {
+      cursor: pointer;
+      width: 50%;
+      height: 100%;
+      background-color: $yellow-opacity;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card_box {
+    &__vote {
+      margin-top: 2rem;
+      height: 5rem;
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .card_box {
+    .highlight {
+      margin-bottom: 1rem;
+    }
+    &__info {
+      h2 {
+        font-size: $font-extra-lg;
+        margin: 0;
+      }
+    }
+    &__vote {
+      height: 3rem;
+    }
+  }
+}
