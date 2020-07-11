@@ -44,8 +44,9 @@
         padding: 15px 20px;
         text-decoration: none;
         color: $white;
+        transition: all 500ms;
         &:hover {
-          color: $red;
+          color: $green;
         }
       }
     }

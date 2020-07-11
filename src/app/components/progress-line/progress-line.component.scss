@@ -1,0 +1,84 @@
+@import '../../../assets/modules/variables.scss';
+.progress {
+  height: 4rem;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  display: flex;
+
+  .positive,
+  .negative {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 500ms;
+    p {
+      font-size: $font-extra-lg;
+      color: $white;
+      font-weight: $light;
+    }
+    .fa-thumbs-up,
+    .fa-thumbs-down {
+      height: 40px;
+      width: 40px;
+      margin: 0px 10px;
+      color: $white;
+    }
+  }
+  .positive {
+    background-color: $green-opacity;
+    justify-content: flex-start;
+  }
+  .negative {
+    background-color: $yellow-opacity;
+    justify-content: flex-end;
+    p {
+      margin-right: 10px;
+    }
+  }
+  &__normal_line {
+    width: 100%;
+    display: flex;
+    &__positive,
+    &__negative {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .fa-thumbs-up,
+      .fa-thumbs-down {
+        height: 40px;
+        width: 40px;
+        color: $white;
+      }
+    }
+    &__positive {
+      cursor: pointer;
+      width: 50%;
+      height: 100%;
+      background-color: $green-opacity;
+    }
+    &__negative {
+      cursor: pointer;
+      width: 50%;
+      height: 100%;
+      background-color: $yellow-opacity;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .progress {
+    .positive,
+    .negative {
+      p {
+        font-size: $font-md;
+      }
+      .fa-thumbs-up,
+      .fa-thumbs-down {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}

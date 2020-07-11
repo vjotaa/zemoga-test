@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { VoteCardComponent } from './components/vote-card/vote-card.component';
+import { ProgressLineComponent } from './components/progress-line/progress-line.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { VoteCardComponent } from './components/vote-card/vote-card.component';
     HomeComponent,
     HeaderComponent,
     CardComponent,
-    VoteCardComponent
+    VoteCardComponent,
+    ProgressLineComponent
   ],
   imports: [
     BrowserModule,

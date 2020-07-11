@@ -26,11 +26,15 @@
   }
   &__text {
     position: relative;
-    height: 87%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
+    .active {
+      border: 2px solid $white;
+      transition: 500ms;
+    }
     .green {
       background-color: $green;
     }
@@ -38,18 +42,24 @@
       background-color: $yellow;
     }
     .box {
-      margin-top: 5px;
+      margin-bottom: 5px;
+      transition: 500ms;
       height: 40px;
       width: 45px;
       display: flex;
       cursor: pointer;
       align-items: center;
       justify-content: center;
-      .fa-thumbs-up,
-      .fa-thumbs-down {
-        width: 60%;
-        height: 60%;
-        color: $white;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa-thumbs-up,
+        .fa-thumbs-down {
+          width: 60%;
+          height: 60%;
+          color: $white;
+        }
       }
     }
     &__wrapper {
@@ -60,11 +70,11 @@
       z-index: 2;
       &__box {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         p {
           margin-left: 7px;
           font-weight: $regular;
-          font-size: $font-max;
+          font-size: 40px;
           color: $white;
         }
       }
@@ -92,45 +102,19 @@
         display: flex;
         align-items: center;
         width: 45%;
+        transition: all 500ms;
         justify-content: space-between;
       }
-    }
-  }
-  &__footer {
-    height: 13%;
-    width: 100%;
-    z-index: 4;
-    position: relative;
-    display: flex;
-
-    .positive,
-    .negative {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      p {
-        font-size: $font-extra-lg;
-        color: $white;
-        font-weight: $light;
-      }
-      .fa-thumbs-up,
-      .fa-thumbs-down {
-        height: 40px;
-        width: 40px;
-        margin: 0px 10px;
-        color: $white;
-      }
-    }
-    .positive {
-      background-color: $green-opacity;
-      justify-content: flex-start;
-    }
-    .negative {
-      background-color: $yellow-opacity;
-      justify-content: flex-end;
-      p {
-        margin-right: 10px;
+      &__done {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-left: 55px;
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+        p {
+          margin-bottom: 30px;
+        }
       }
     }
   }
@@ -138,7 +122,6 @@
 
 @media (max-width: 600px) {
   .vote_card {
-    height: 30rem;
     .primary-button {
       font-size: $font-sm;
     }
@@ -149,6 +132,7 @@
             font-size: $font-lg;
           }
         }
+
         .time {
           font-size: $font-sm;
         }
@@ -158,19 +142,6 @@
         &__vote_box {
           width: 85%;
           padding-left: 20px;
-        }
-      }
-    }
-    &__footer {
-      .positive,
-      .negative {
-        p {
-          font-size: $font-md;
-        }
-        .fa-thumbs-up,
-        .fa-thumbs-down {
-          height: 20px;
-          width: 20px;
         }
       }
     }

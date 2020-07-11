@@ -1,0 +1,59 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "home": false,
+      "name": "Kanye West",
+      "description": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quas, repellendus nulla perspiciatis enim consectetur assumenda sapiente.",
+      "date": "12/12/2020",
+      "image": "/assets/images/kanye.jpeg",
+      "positive": 1,
+      "negative": 2,
+      "last_vote": null
+    },
+    {
+      "id": 2,
+      "home": false,
+      "name": "Mark Zuckerberg",
+      "description": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quas, repellendus nulla perspiciatis enim consectetur assumenda sapiente.",
+      "date": "12/12/2020",
+      "image": "/assets/images/mark.jpg",
+      "positive": 0,
+      "negative": 0,
+      "last_vote": null
+    },
+    {
+      "id": 3,
+      "home": false,
+      "name": "Cristina Fernández de Kirchner",
+      "description": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quas, repellendus nulla perspiciatis enim consectetur assumenda sapiente.",
+      "date": "12/12/2020",
+      "image": "/assets/images/cristina.jpg",
+      "positive": 0,
+      "negative": 4,
+      "last_vote": null
+    },
+    {
+      "id": 4,
+      "home": false,
+      "name": "Malala Uousafzai",
+      "description": " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quas, repellendus nulla perspiciatis enim consectetur assumenda sapiente.",
+      "date": "12/12/2020",
+      "image": "/assets/images/malala.jpg",
+      "positive": 10,
+      "negative": 3,
+      "last_vote": null
+    },
+    {
+      "id": 5,
+      "home": true,
+      "name": "Pope Francis",
+      "description": "He’s talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)",
+      "date": "12/12/2020",
+      "image": "/assets/images/kanye.jpeg",
+      "positive": 0,
+      "negative": 0,
+      "last_vote": null
+    }
+  ]
+}

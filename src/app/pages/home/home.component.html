@@ -4,7 +4,15 @@
       <img src="/assets/images/pope.png" alt="pope" />
       <div class="home__section_one__image__background"></div>
     </div>
-    <app-card class="home__section_one__card"></app-card>
+
+    <span *ngFor="let item of people">
+      <app-card
+        *ngIf="item.home"
+        [data]="people"
+        [item]="item"
+        class="home__section_one__card"
+      ></app-card>
+    </span>
     <div class="home__section_one__bar">
       <div class="home__section_one__bar__item">
         <p>Closing in</p>
@@ -35,8 +43,13 @@
   <div class="home__section_three container">
     <p>Votes</p>
     <div class="home__section_three__people">
-      <app-vote-card></app-vote-card>
-      <app-vote-card></app-vote-card>
+      <span *ngFor="let item of people">
+        <app-vote-card
+          *ngIf="!item.home"
+          [data]="people"
+          [item]="item"
+        ></app-vote-card>
+      </span>
     </div>
   </div>
   <div class="home__section_four">

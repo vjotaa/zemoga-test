@@ -2,37 +2,67 @@
   <div class="vote_card__text">
     <div class="vote_card__text__wrapper">
       <div class="vote_card__text__wrapper__box">
-        <div class="box green">
-          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        <div
+          *ngIf="item.last_vote"
+          [ngClass]="{
+            green: item.last_vote === 'positive',
+            yellow: item.last_vote === 'negative'
+          }"
+          class="box"
+        >
+          <div *ngIf="item.last_vote === 'positive'">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          </div>
+          <div *ngIf="item.last_vote === 'negative'">
+            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+          </div>
         </div>
-        <p>Kanye west</p>
+        <p>{{ item.name }}</p>
       </div>
       <p class="time"><span>1 moth ago by</span> enternaitmew</p>
-      <p class="description">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quas,
-        repellendus nulla perspiciatis enim consectetur assumenda sapiente.
+      <p *ngIf="!finish" class="description">
+        {{ item.description }}
       </p>
-      <div class="vote_card__text__wrapper__vote_box">
-        <div class="box green">
-          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <div *ngIf="!finish" class="vote_card__text__wrapper__vote_box">
+        <div
+          [ngClass]="{ active: selectedRating === 'positive' }"
+          (click)="selectRating('positive')"
+          class="box green"
+        >
+          <div>
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          </div>
         </div>
-        <div class="box yellow">
-          <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+        <div
+          [ngClass]="{ active: selectedRating === 'negative' }"
+          (click)="selectRating('negative')"
+          class="box yellow"
+        >
+          <div>
+            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+          </div>
         </div>
-        <button class="primary-button">Vote now</button>
+        <button
+          [disabled]="selectedRating === null"
+          (click)="sendRating()"
+          class="primary-button"
+        >
+          Vote now
+        </button>
+      </div>
+      <div *ngIf="finish" class="vote_card__text__wrapper__done">
+        <p>Thank you for voting!</p>
+        <button (click)="voteAgain()" class="primary-button">
+          Vote again
+        </button>
       </div>
     </div>
   </div>
-  <div class="vote_card__footer">
-    <div class="positive">
-      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-      <p>50%</p>
-    </div>
-    <div class="negative">
-      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-      <p>50%</p>
-    </div>
-  </div>
-  <img src="/assets/images/kanye.jpeg" alt="Kanye West" />
+  <app-progress-line
+    (selectedRating)="sendRating($event)"
+    [positive]="item.positive"
+    [negative]="item.negative"
+  ></app-progress-line>
+  <img [src]="item.image" alt="{{ item.name }}" />
   <div class="background"></div>
 </div>

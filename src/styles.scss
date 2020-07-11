@@ -25,10 +25,14 @@ body {
   background-color: transparent;
   color: $white;
   cursor: pointer;
+  transition: 500ms;
   &:focus,
   :active {
     outline: none;
     border-style: outset;
+    background-color: $white;
+    color: $black;
+    transition: 500ms;
   }
 }
 

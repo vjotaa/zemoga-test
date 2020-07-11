@@ -1,0 +1,36 @@
+<div class="progress">
+  <div *ngIf="positive === 0 && negative === 0" class="progress__normal_line">
+    <div
+      (click)="selectRating('positive')"
+      class="progress__normal_line__positive"
+    >
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+    </div>
+    <div
+      (click)="selectRating('negative')"
+      class="progress__normal_line__negative"
+    >
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div
+    *ngIf="positive !== 0"
+    [ngStyle]="{
+      width: calculateRating(positive, negative, 'positive') + '%'
+    }"
+    class="positive"
+  >
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+    <p>{{ calculateRating(positive, negative, 'positive') }}%</p>
+  </div>
+  <div
+    *ngIf="negative !== 0"
+    [ngStyle]="{
+      width: calculateRating(positive, negative, 'negative') + '%'
+    }"
+    class="negative"
+  >
+    <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+    <p>{{ calculateRating(positive, negative, 'negative') }}%</p>
+  </div>
+</div>
