@@ -10,6 +10,8 @@ previo a esto se tiene que tener instalado angular y npm en el computador.
 
 Para correr pruebas unitarias se necesita colocar el siguiente comando `ng test`
 
+El proyecto se puede ser en linea desde https://zemoga-test-d5940.web.app/home
+
 ## Estructura del proyecto
 
 El proyecto esta estructura por 3 carpetas.
