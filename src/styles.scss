@@ -39,3 +39,28 @@ body {
 .container {
   padding: 0 10%;
 }
+
+.content_empty {
+  height: 100vh;
+  width: 100%;
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-weight: $bold;
+    font-size: $font-lg;
+    color: $white;
+    opacity: 0;
+    animation: animation 2s forwards;
+  }
+}
+
+@keyframes animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

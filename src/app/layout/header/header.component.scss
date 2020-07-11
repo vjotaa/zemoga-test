@@ -32,6 +32,8 @@
     &__logo {
       font-size: $font-extra-lg;
       color: $white;
+      text-decoration: none;
+      cursor: pointer;
     }
     ul {
       margin: 0;
@@ -51,6 +53,9 @@
       }
     }
   }
+}
+.active {
+  color: $green;
 }
 
 @media (max-width: 1200px) {
@@ -95,9 +100,13 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      &__logo {
+      a {
         padding-left: 20px;
         font-size: $font-lg;
+        &:focus,
+        :active {
+          outline: none !important;
+        }
       }
     }
     #menu:checked ~ .header__items {
