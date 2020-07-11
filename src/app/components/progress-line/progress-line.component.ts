@@ -11,7 +11,11 @@ export class ProgressLineComponent implements OnInit {
   @Output() selectedRating = new EventEmitter<string>();
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      console.log(document.getElementById('positive'));
+    }, 3000);
+  }
 
   public calculateRating(
     positive: number,

@@ -1,12 +1,14 @@
 <div class="progress">
   <div *ngIf="positive === 0 && negative === 0" class="progress__normal_line">
     <div
+      id="positive"
       (click)="selectRating('positive')"
       class="progress__normal_line__positive"
     >
       <i class="fa fa-thumbs-up" aria-hidden="true"></i>
     </div>
     <div
+      id="negative"
       (click)="selectRating('negative')"
       class="progress__normal_line__negative"
     >

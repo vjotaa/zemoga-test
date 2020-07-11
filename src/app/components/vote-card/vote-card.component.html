@@ -3,25 +3,25 @@
     <div class="vote_card__text__wrapper">
       <div class="vote_card__text__wrapper__box">
         <div
-          *ngIf="item.last_vote"
+          *ngIf="item?.last_vote"
           [ngClass]="{
-            green: item.last_vote === 'positive',
-            yellow: item.last_vote === 'negative'
+            green: item?.last_vote === 'positive',
+            yellow: item?.last_vote === 'negative'
           }"
           class="box"
         >
-          <div *ngIf="item.last_vote === 'positive'">
+          <div *ngIf="item?.last_vote === 'positive'">
             <i class="fa fa-thumbs-up" aria-hidden="true"></i>
           </div>
-          <div *ngIf="item.last_vote === 'negative'">
+          <div *ngIf="item?.last_vote === 'negative'">
             <i class="fa fa-thumbs-down" aria-hidden="true"></i>
           </div>
         </div>
-        <p>{{ item.name }}</p>
+        <p>{{ item?.name }}</p>
       </div>
-      <p class="time"><span>1 moth ago by</span> enternaitmew</p>
+      <p class="time"><span>1 Month ago by</span> Entertainment</p>
       <p *ngIf="!finish" class="description">
-        {{ item.description }}
+        {{ item?.description }}
       </p>
       <div *ngIf="!finish" class="vote_card__text__wrapper__vote_box">
         <div
@@ -60,9 +60,9 @@
   </div>
   <app-progress-line
     (selectedRating)="sendRating($event)"
-    [positive]="item.positive"
-    [negative]="item.negative"
+    [positive]="item?.positive"
+    [negative]="item?.negative"
   ></app-progress-line>
-  <img [src]="item.image" alt="{{ item.name }}" />
+  <img [src]="item?.image" alt="{{ item?.name }}" />
   <div class="background"></div>
 </div>
