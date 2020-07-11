@@ -5,6 +5,8 @@ No se utilizo ninguna libreria de estilos.
 
 ## Instalación
 
+Debido a que el proyecto es de tipo frontend unicamente existe todo el proceso en la rama master.
+
 Simplemente hay que correr `npm install` para descargar la carpera `node_modules` y luego de eso correr el proyecto con `ng serve`
 previo a esto se tiene que tener instalado angular y npm en el computador.
 
