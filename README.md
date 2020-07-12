@@ -3,6 +3,8 @@
 Para esta prueba se utilizo Angular unicamente.
 No se utilizo ninguna libreria de estilos.
 
+Se cambiaron imagenes e iconos que traia en el comp porque me fue imposible abrir el sketch en photoshop debido a que tenia problemas con el computador, sin embargo trate de que fuera lo mas identico posible.
+
 ## Instalación
 
 Debido a que el proyecto es de tipo frontend unicamente existe todo el proceso en la rama master.
